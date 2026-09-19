@@ -1,0 +1,29 @@
+{
+  "brand": "Dominion Protective Solutions",
+  "license": "CA PPO #122483",
+  "comment": "Only in-service DPS public hosts. Do not add wildcard phantoms (docs, portal, ops, maps, dl, etc.). Ironclad and pitetti.co are out of scope.",
+  "checks": [
+    {
+      "id": "website",
+      "name": "Website",
+      "url": "https://dominionprotectivesolutions.com/",
+      "expect": [200],
+      "note": "Public marketing site"
+    },
+    {
+      "id": "crm",
+      "name": "Nexus CRM",
+      "url": "https://crm.dominionprotectivesolutions.com/",
+      "expect": [200, 301, 302, 303, 307, 308, 401],
+      "auth_challenge_is_up": true,
+      "note": "Staff CRM. An auth challenge means the app is serving."
+    },
+    {
+      "id": "sign",
+      "name": "OpenSign",
+      "url": "https://sign.dominionprotectivesolutions.com/",
+      "expect": [200, 301, 302, 303, 307, 308],
+      "note": "Document signing"
+    }
+  ]
+}
