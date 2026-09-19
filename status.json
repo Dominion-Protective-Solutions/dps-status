@@ -1,8 +1,8 @@
 {
   "brand": "Dominion Protective Solutions",
   "license": "CA PPO #122483",
-  "published_at": "2026-09-19T21:03:03Z",
-  "headline": "Partial outage",
+  "published_at": "2026-09-19T21:59:17Z",
+  "headline": "Checked systems operational",
   "checks": [
     {
       "id": "website",
@@ -26,9 +26,9 @@
       "id": "sign",
       "name": "OpenSign",
       "url": "https://sign.dominionprotectivesolutions.com/",
-      "state": "down",
-      "http_status": 404,
-      "detail": "HTTP 404",
+      "state": "operational",
+      "http_status": 200,
+      "detail": "HTTP 200",
       "note": "Document signing"
     }
   ]
