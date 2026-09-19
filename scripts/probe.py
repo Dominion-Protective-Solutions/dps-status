@@ -209,11 +209,11 @@ h1{{font-size:22px;margin:6px 0 2px;color:#f5f5f4}}
 .headline{{font-size:17px;font-weight:600;color:{color}}}
 .banner{{background:#1c1408;border:1px solid #854d0e;border-radius:8px;padding:12px 14px;font-size:14px;margin:14px 0;color:#fde68a}}
 .card{{background:#0d0d0d;border:1px solid #2a2a2a;border-radius:10px;overflow:hidden;margin-top:14px}}
-.row{{display:flex;justify-content:space-between;align-items:center;padding:14px 16px;border-bottom:1px solid #2a2a2a;gap:16px}}
+.row{{display:flex;justify-content:space-between;align-items:flex-start;padding:14px 16px;border-bottom:1px solid #2a2a2a;gap:12px}}
 .row:last-child{{border-bottom:none}}
-.svc{{font-size:15px;font-weight:500}}
-.note{{font-size:12.5px;color:#a8a29e;font-weight:400;margin-top:2px;line-height:1.4}}
-.state{{font-size:14px;font-weight:600;white-space:nowrap}}
+.svc{{font-size:15px;font-weight:500;min-width:0;flex:1}}
+.note{{font-size:12.5px;color:#a8a29e;font-weight:400;margin-top:2px;line-height:1.4;overflow-wrap:anywhere}}
+.state{{font-size:13px;font-weight:600;white-space:nowrap;flex-shrink:0}}
 footer{{margin-top:22px;font-size:12.5px;color:#a8a29e;line-height:1.5}}
 </style></head><body><div class="wrap">
 <div class="brand">{brand}</div>
