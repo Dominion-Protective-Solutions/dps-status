@@ -1,0 +1,43 @@
+name: Publish status
+
+on:
+  schedule:
+    - cron: "*/15 * * * *"
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/publish.yml"
+      - "scripts/**"
+      - "checks.json"
+
+concurrency:
+  group: publish-status
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  probe:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+
+      - name: Probe in-service hosts and render Pages
+        run: python3 scripts/probe.py --write-html index.html --write-json status.json
+
+      - name: Commit snapshot to main
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add index.html status.json
+          if git diff --staged --quiet; then
+            echo "HTML/JSON unchanged"
+            exit 0
+          fi
+          git commit -m "status: publish probe $(date -u +%Y-%m-%dT%H:%MZ)"
+          git push

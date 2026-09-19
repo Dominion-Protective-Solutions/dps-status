@@ -1,0 +1,35 @@
+{
+  "brand": "Dominion Protective Solutions",
+  "license": "CA PPO #122483",
+  "published_at": "2026-09-19T20:47:07Z",
+  "headline": "Partial outage",
+  "checks": [
+    {
+      "id": "website",
+      "name": "Website",
+      "url": "https://dominionprotectivesolutions.com/",
+      "state": "operational",
+      "http_status": 200,
+      "detail": "HTTP 200",
+      "note": "Public marketing site"
+    },
+    {
+      "id": "crm",
+      "name": "Nexus CRM",
+      "url": "https://crm.dominionprotectivesolutions.com/",
+      "state": "operational",
+      "http_status": 401,
+      "detail": "HTTP 401 auth challenge",
+      "note": "Staff CRM. An auth challenge means the app is serving."
+    },
+    {
+      "id": "sign",
+      "name": "OpenSign",
+      "url": "https://sign.dominionprotectivesolutions.com/",
+      "state": "down",
+      "http_status": 404,
+      "detail": "HTTP 404",
+      "note": "Document signing"
+    }
+  ]
+}
