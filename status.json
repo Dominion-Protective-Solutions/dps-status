@@ -1,7 +1,7 @@
 {
   "brand": "Dominion Protective Solutions",
   "license": "CA PPO #122483",
-  "published_at": "2026-09-20T23:54:23Z",
+  "published_at": "2026-09-21T03:47:18Z",
   "headline": "Checked systems operational",
   "checks": [
     {
@@ -18,8 +18,8 @@
       "name": "Nexus CRM",
       "url": "https://crm.dominionprotectivesolutions.com/",
       "state": "operational",
-      "http_status": 401,
-      "detail": "HTTP 401 auth challenge",
+      "http_status": 200,
+      "detail": "HTTP 200",
       "note": "Staff CRM. An auth challenge means the app is serving."
     },
     {
