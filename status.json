@@ -1,8 +1,8 @@
 {
   "brand": "Dominion Protective Solutions",
   "license": "CA PPO #122483",
-  "published_at": "2026-10-14T09:31:10Z",
-  "headline": "Partial outage",
+  "published_at": "2026-10-14T14:40:28Z",
+  "headline": "Checked systems operational",
   "checks": [
     {
       "id": "website",
@@ -17,9 +17,9 @@
       "id": "crm",
       "name": "Nexus CRM",
       "url": "https://crm.dominionprotectivesolutions.com/",
-      "state": "error",
-      "http_status": null,
-      "detail": "URLError: <urlopen error timed out>",
+      "state": "operational",
+      "http_status": 200,
+      "detail": "HTTP 200",
       "note": "Staff CRM. An auth challenge means the app is serving."
     },
     {
